@@ -1,0 +1,5 @@
+python deep_sort_app.py --sequence_dir=./MOT16/test/MOT16-06 --detection_file=./resources/detections/MOT16_POI_test/MOT16-06.npy --output_file=./tmp/result.txt --min_confidence=0.3 --nn_budget=100 --display=True
+
+python evaluate_motchallenge.py --mot_dir MOT16/train --detection_dir resources/detections/MOT16_POI_train
+
+python -m motmetrics.apps.eval_motchallenge C:/Users/Harun/Desktop/MOT-DENEME/groundth C:/Users/Harun/Desktop/MOT-DENEME/results
