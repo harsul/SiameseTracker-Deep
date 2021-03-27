@@ -195,7 +195,6 @@ def run(sequence_dir, detection_file, output_file, min_confidence,
         for (objectID, bbox) in objects.items():
             results.append([frame_idx, objectID, bbox[0], bbox[1], bbox[2], bbox[3]])
 
-        print(results)
         # # Update tracker
         # tracker.predict()
         # tracker.update(detections)
