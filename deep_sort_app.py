@@ -195,6 +195,7 @@ def run(sequence_dir, detection_file, output_file, min_confidence,
         for (objectID, bbox) in objects.items():
             results.append([frame_idx, objectID, bbox[0], bbox[1], bbox[2], bbox[3]])
 
+        print(results)
         # # Update tracker
         # tracker.predict()
         # tracker.update(detections)
@@ -242,16 +243,16 @@ def parse_args():
     parser = argparse.ArgumentParser(description = "Deep SORT")
     parser.add_argument(
         "--sequence_dir", help = "Path to MOTChallenge sequence directory",
-        default = "./MOT16/train/MOT16-09",
+        default = "/content/SiameseTracker-Deep/MOT16/train/MOT16-02",
         required = False)
     parser.add_argument(
         "--detection_file", help = "Path to custom detections.",
-        default = "./resources/detections/MOT16_POI_train/MOT16-09.npy",
+        default = "/content/SiameseTracker-Deep/resources/detections/MOT16_POI_train/MOT16-02.npy",
         required = False)
     parser.add_argument(
         "--output_file", help = "Path to the tracking output file. This file will"
                                 " contain the tracking results on completion.",
-        default = "./results/results.txt")
+        default = "/content/SiameseTracker-Deep/results/MOT16-02.txt")
     parser.add_argument(
         "--min_confidence", help = "Detection confidence threshold. Disregard "
                                    "all detections that have a confidence lower than this value.",

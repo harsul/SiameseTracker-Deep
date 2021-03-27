@@ -13,7 +13,7 @@ import warnings
 
 class ReId:
 
-    def __init__(self, root='./tmp', url=None, name=None):
+    def __init__(self, root='/content/SiameseTracker-Deep/siamese', url=None, name=None):
         """
             create a new instance of the ReId network
         :param root:
